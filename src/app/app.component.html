@@ -1,0 +1,43 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="header container-fluid">
+  <div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 py-sm-2 d-flex align-items-center justify-content-center">
+      <button mat-button class="home" [routerLink]="'/'">HOME</button>
+      <button mat-button class="home ml-3" [routerLink]="'/heroelists'">HOROES LIST</button>
+    </div>
+    <div
+      class="col-lg-3 col-md-4 col-sm-12 col-xs-12 offset-lg-6 offset-md-4 d-flex align-items-center justify-content-center">
+      <mat-form-field>
+        <mat-label>Look for hero!</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let food of searchheroes" [value]="food">
+            {{food}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <a mat-icon-button [matMenuTriggerFor]="beforeMenu"><mat-icon class="mat-icons">language</mat-icon></a>
+      <mat-menu #beforeMenu="matMenu" xPosition="before">
+        <button mat-menu-item> <mat-icon>flag</mat-icon> English</button>
+        <button mat-menu-item> <mat-icon>flag</mat-icon> Espanol</button>
+      </mat-menu>
+      <a href=""><img src="../assets/github.svg" alt=""></a>
+    </div>
+  </div>
+  <mat-progress-bar mode="determinate" value="0"></mat-progress-bar>
+</div>
+<router-outlet></router-outlet>
+<footer>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-12 d-flex align-items-center text-center">
+        <p>Angular Example App 2019</p>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 d-flex align-items-center text-center">
+        <p>{{date | date: 'fullDate'}} {{date | date : 'shortTime'}}</p>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 justify-content-end d-flex align-items-center">
+        <a href="https://angular.io" target="blank"><img src="../assets/angular.svg" class="img-fluid" alt=""></a>
+      </div>
+    </div>
+  </div>
+</footer>

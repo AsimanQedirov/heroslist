@@ -1,0 +1,45 @@
+h4{
+    margin-top: 86px;
+    font-size: 25px;
+    text-align: center;
+    font-weight: 400;
+}
+.mat-card{
+    width: 60%;
+    margin: 33px auto;
+}
+@media only screen and (max-width: 600px) {
+    .mat-card{
+        width: 100%;
+    }
+  }
+.heros{
+    padding-top: 100px;
+}
+
+a{
+    color: rgba(0,0,0,.54);
+}
+a:hover{
+    color:rgba(0,0,0,.54);
+    text-decoration: none;
+}
+.mat-card-title{
+    font-size: 16px;
+}
+.mat-card-subtitle{
+    margin-top: 0px;
+    font-size: 12px;
+}
+.flex-spacer{
+    flex-grow: 1;
+}
+button:focus{
+    outline: none;
+}
+.mat-icon-heart{
+    color: #dc143c;
+}
+span{
+    margin-top: 10px;
+}

@@ -1,0 +1,83 @@
+$specialColor : #3f51b5;
+a{
+    cursor: pointer;
+}
+.mat-select-value {
+    color: rgba(0, 0, 0, 0.87);
+}
+.header{
+    background: $specialColor;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    padding: 0px !important;
+   .row{
+    margin: 0px !important;
+   }
+        .home{
+            color: $specialColor;
+            background: white;
+            font-size: 14px;
+            box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+        }
+        .home:focus{
+            outline: none;
+        }
+        mat-label{
+            color: white;
+        }
+        a{
+            text-decoration: none;
+            .mat-icons{
+                color: white;
+                margin: 0px 6px;
+            }
+            img{
+                margin-bottom: 1px;
+            }
+        }
+       
+}
+.mat-select-value, .mat-select-arrow{
+    color: #fff !important;
+}
+
+.mat-form-field-infix{
+    border-bottom: 2px solid white !important;
+}
+
+.mat-focused .mat-form-field-underline .mat-form-field-ripple{
+     background: none; 
+}
+button{
+    outline: none !important;
+}
+.mat-menu-item{
+    color:white;
+    .mat-icon-no-color{
+        color: white;
+    }
+}
+.mat-menu-panel {
+    background-color: $specialColor !important;
+    color: white;
+}
+.mat-select-arrow {
+    display: none !important;
+    .mat-select-arrow-wrapper{
+        border: 0px !important;
+    }
+}
+
+
+footer{
+    background-color: $specialColor;
+    p{
+        color: white;
+        font-size: 17px;
+        font-weight: 500;
+    }
+    img{
+        width: 100%;
+    }
+}

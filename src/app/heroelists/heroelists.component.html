@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12">
+      <h4>Heroes list</h4>
+      <mat-card *ngFor="let hero of heroelists">
+        <mat-card-header>
+          <a mat-card-avatar><img mat-card-avatar [src]="hero.avatar" alt=""></a>
+          <mat-card-title><a>{{hero.palindrome}}</a></mat-card-title>
+          <mat-card-subtitle><a>{{hero.name}}</a></mat-card-subtitle>
+          <div class="flex-spacer"></div>
+
+          <span>{{hero.likes}}</span>
+          <button mat-icon-button>
+            <mat-icon class="mat-icon-heart">favorite</mat-icon>
+          </button>
+        </mat-card-header>
+      </mat-card>
+      <mat-card>
+        <mat-card-header *ngFor="let def of defaultheroe">
+          <a mat-card-avatar><img mat-card-avatar src="../../assets/heros-file/default-hero.png" alt=""></a>
+          <mat-card-title><a>{{def.name}}</a></mat-card-title>
+          <mat-card-subtitle>{{def.palindrome}}</mat-card-subtitle>
+          <div class="flex-spacer"></div>
+          <span>{{def.likes}}</span>
+          <button mat-icon-button>
+            <mat-icon class="mat-icon-heart">favorite</mat-icon>
+          </button>
+          <button mat-icon-button (click)="deleteItem(f)" #f [id]="def.id">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-card-header>
+      </mat-card>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12">
+      <h4>Create a hero</h4>
+      <form class="example-form" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <div>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Name (Palindrome?)" formControlName="textFormControl"
+              [errorStateMatcher]="matcher">
+            <mat-error>
+              Name (Palindrome) is empty
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Name" formControlName="nameFormControl">
+            <mat-error>
+              Name is Empty
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="text-center">
+          <button mat-raised-button type="submit" [disabled]="">Create</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

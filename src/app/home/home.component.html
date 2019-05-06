@@ -1,0 +1,14 @@
+    <div class="heros container-fluid">
+            <p>Heroes most liked</p>
+            <mat-card *ngFor="let heroe of heroes">
+                <mat-card-header>
+                    <a mat-card-avatar (click)="navigateFunction(template)"><img mat-card-avatar [src]="heroe.avatar" alt=""></a>
+                    <mat-card-title><a (click)="navigateFunction(template)" #template>{{heroe.palindrome}}</a></mat-card-title>
+                    <mat-card-subtitle><a (click)="navigateFunction(template)">{{heroe.name}}</a></mat-card-subtitle>
+                    <div class="flex-spacer"></div>
+                    <span>{{heroe.likes}}</span>
+                    <button mat-icon-button><mat-icon class="mat-icon-heart">favorite</mat-icon></button>
+                </mat-card-header>
+                <a (click)="navigateFunction(template)"><img [src]="heroe.img" class="img-fluid" alt=""></a>
+            </mat-card>
+    </div>
